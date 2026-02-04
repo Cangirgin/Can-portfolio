@@ -40,42 +40,6 @@ export default function Projects() {
     },
   ];
 
-  const roadmapSteps = [
-    {
-      title: "1. Adım: Veri Katmanını Tasarla (Database)",
-      items: [
-        "Employee: İsim, ID, departman, haftalık maksimum saat.",
-        "Availability: Gün bazlı çalışabilir/çalışamaz saat aralıkları.",
-        "Shift: Başlangıç saati, bitiş saati ve görev türü (CB, TL, HO gibi).",
-      ],
-    },
-    {
-      title: "2. Adım: Arayüzü İnşa Et (Frontend)",
-      items: [
-        "Grid sistemi: Satırlarda çalışanlar, sütunlarda 08:00-04:00 saatleri.",
-        "Dinamik renklendirme: Uygun saat hücresi yeşil, içine görev kodu yazılır.",
-        "TanStack Table: 50+ çalışan ve 24 saatlik büyük veri için performans.",
-      ],
-    },
-    {
-      title: "3. Adım: Otomatik Dağıtım Algoritması (The Logic)",
-      items: [
-        "Talep kontrolü: Örn. 09:00’da 10 kişi ihtiyacı gibi slot sayıları.",
-        "Müsaitlik elemesi: Uygunluk bildiren çalışanların filtrelenmesi.",
-        "Kural kontrolü: Haftalık saat limiti, 11 saat dinlenme kuralı.",
-        "Atama: Uygun adayların boş saatlere dağıtılması.",
-      ],
-    },
-    {
-      title: "4. Adım: Görseldeki Detayları Ekle",
-      items: [
-        "Departman başlıkları: RECEPTION, KITCHEN gibi gruplama satırları.",
-        "Günlük/haftalık toplam: TDT sütununda anlık saat hesabı.",
-        "Kod seçimleri: HO, CB, TL gibi kısaltmalar için select menü.",
-      ],
-    },
-  ];
-
   return (
     <div style={{ backgroundColor: "#f5f5f7", minHeight: "100vh" }}>
       <Head>
@@ -125,35 +89,6 @@ export default function Projects() {
             </motion.div>
           ))}
 
-          <Card
-            className="shadow-lg rounded-4 p-4"
-            style={{
-              backdropFilter: "blur(8px)",
-              backgroundColor: "rgba(255,255,255,0.85)",
-            }}
-          >
-            <Card.Body>
-              <Card.Title className="fs-4 fw-bold">
-                🗂️ Vardiya Planlama Otomasyonu - Teknik Yol Haritası
-              </Card.Title>
-              <Card.Text className="text-muted">
-                Görseldeki detaylı Gantt/Time-Grid yapısını otomatikleştirmek
-                için izlenmesi gereken adımlar.
-              </Card.Text>
-              <div className="d-flex flex-column gap-4">
-                {roadmapSteps.map((step) => (
-                  <div key={step.title}>
-                    <h5 className="fw-semibold mb-2">{step.title}</h5>
-                    <ul className="text-start mb-0">
-                      {step.items.map((item) => (
-                        <li key={item}>{item}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </Card.Body>
-          </Card>
         </motion.div>
       </Container>
     </div>
