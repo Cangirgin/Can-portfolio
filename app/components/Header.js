@@ -11,6 +11,7 @@ export default function MiniTrafficNav() {
   const links = [
     { href: "/", color: "red", label: "Ana Sayfa" },
     { href: "/about", color: "yellow", label: "Hakkımda" },
+    { href: "/shift-planner", color: "purple", label: "ShiftPlanner" },
     { href: "/travels", color: "green", label: "Gezdiğim Ülkeler" },
     { href: "/contact", color: "blue", label: "İletişim" },
   ];
@@ -72,6 +73,9 @@ export default function MiniTrafficNav() {
         }
         .dot.green {
           background-color: #00ca4e;
+        }
+        .dot.purple {
+          background-color: #7c4dff;
         }
         .dot.blue {
           background-color: #0d6efd;
