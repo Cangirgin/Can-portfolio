@@ -50,13 +50,18 @@ export default function Projects() {
         />
       </Head>
 
-      <Container className="py-5">
+      <Container className="py-5 px-3">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <h1 className="mb-5 text-center fw-bold">📂 Projelerim</h1>
+          <h1
+            className="mb-5 text-center fw-bold"
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+          >
+            📂 Projelerim
+          </h1>
 
           {projects.map((project, idx) => (
             <motion.div key={idx} whileHover={cardHover} className="mb-4">

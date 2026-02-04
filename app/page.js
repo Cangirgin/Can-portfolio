@@ -22,16 +22,22 @@ export default function Home() {
         />
       </Head>
 
-      <Container className="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center py-5">
+      <Container className="d-flex flex-column justify-content-center align-items-center min-vh-100 text-center py-5 px-3">
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
-          <h1 className="mb-3 fw-bold" style={{ fontSize: "3rem" }}>
+          <h1
+            className="mb-3 fw-bold"
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+          >
             Merhaba, Benim Adım Can! 👋
           </h1>
-          <p className="lead text-muted mb-5" style={{ fontSize: "1.25rem" }}>
+          <p
+            className="lead text-muted mb-4 mb-md-5"
+            style={{ fontSize: "clamp(1rem, 2vw, 1.25rem)" }}
+          >
             Frontend geliştiricisiyim. Modern, hızlı ve kullanıcı dostu
             arayüzler geliştiriyorum.
           </p>
@@ -42,6 +48,15 @@ export default function Home() {
                 <Link href="/about" passHref legacyBehavior>
                   <Button variant="primary" size="lg">
                     🚀 Hakkımda
+                  </Button>
+                </Link>
+              </motion.div>
+            </Col>
+            <Col xs="auto">
+              <motion.div whileHover={{ scale: 1.1 }}>
+                <Link href="/travels" passHref legacyBehavior>
+                  <Button variant="outline-primary" size="lg">
+                    🌍 Gezdiğim Ülkeler
                   </Button>
                 </Link>
               </motion.div>
@@ -87,7 +102,10 @@ export default function Home() {
           </div>
 
           {/* Yetenekler */}
-          <div className="mb-5 text-start w-75 mx-auto">
+          <div
+            className="mb-5 text-start w-100 mx-auto"
+            style={{ maxWidth: "720px" }}
+          >
             <h3 className="mb-3">💻 Yeteneklerim</h3>
             {[
               { name: "React", value: 90 },

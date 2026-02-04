@@ -28,13 +28,8 @@ export default function RootLayout({ children }) {
           fontFamily: "system-ui, sans-serif",
         }}
       >
-        <Header>
-          style=
-          {{
-            backgroundColor: "red",
-          }}
-        </Header>
-        <main className="container py-5">{children}</main>
+        <Header />
+        <main className="pt-5">{children}</main>
       </body>
     </html>
   );

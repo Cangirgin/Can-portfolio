@@ -100,7 +100,10 @@ const ContactPage = () => {
     >
       <Row className="justify-content-center align-items-center w-100 g-5">
         <Col xs={12} lg={5} className="text-center text-lg-start">
-          <h1 className="display-4 fw-bold mb-3" style={{ color: "#0d6efd" }}>
+          <h1
+            className="fw-bold mb-3"
+            style={{ color: "#0d6efd", fontSize: "clamp(2rem, 4vw, 3rem)" }}
+          >
             Bize Ulaşın
           </h1>
           <p className="lead mb-4 text-secondary">
@@ -110,16 +113,17 @@ const ContactPage = () => {
           <p className="fs-6 text-muted">
             📍 Adres: 152A Charlotte Street, Peterborough ON
             <br />☎ Telefon: 705-742-3221
-            <br />✉ Email: info@canportfolio.com
+            <br />✉ Email: cangirrgin@gmail.com
           </p>
         </Col>
 
         <Col xs={12} lg={5}>
           <div
-            className="p-5 shadow-lg rounded-5 bg-white"
+            className="p-4 p-md-5 shadow-lg rounded-5 bg-white"
             style={{ transition: "all 0.3s" }}
           >
             <Form ref={form} onSubmit={sendEmail}>
+              <Form.Control type="hidden" name="to_email" value="cangirrgin@gmail.com" />
               <Form.Group className="mb-4" controlId="formName">
                 <Form.Label>İsminiz</Form.Label>
                 <Form.Control
