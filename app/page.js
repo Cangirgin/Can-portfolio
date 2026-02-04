@@ -57,9 +57,9 @@ export default function Home() {
             </Col>
             <Col xs="auto">
               <motion.div whileHover={{ scale: 1.1 }}>
-                <Link href="/roadmap" passHref legacyBehavior>
+                <Link href="/shiftplanner" passHref legacyBehavior>
                   <Button variant="outline-secondary" size="lg">
-                    🗂️ Yol Haritası
+                    🗂️ Shift Planner
                   </Button>
                 </Link>
               </motion.div>
