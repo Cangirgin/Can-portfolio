@@ -88,6 +88,7 @@ export default function Projects() {
               </Card>
             </motion.div>
           ))}
+
         </motion.div>
       </Container>
     </div>

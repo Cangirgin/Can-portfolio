@@ -57,6 +57,15 @@ export default function Home() {
             </Col>
             <Col xs="auto">
               <motion.div whileHover={{ scale: 1.1 }}>
+                <Link href="/shiftplanner" passHref legacyBehavior>
+                  <Button variant="outline-secondary" size="lg">
+                    🗂️ Shift Planner
+                  </Button>
+                </Link>
+              </motion.div>
+            </Col>
+            <Col xs="auto">
+              <motion.div whileHover={{ scale: 1.1 }}>
                 <Link href="/contact" passHref legacyBehavior>
                   <Button variant="outline-secondary" size="lg">
                     📬 İletişim
