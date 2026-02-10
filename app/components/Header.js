@@ -11,7 +11,9 @@ export default function MiniTrafficNav() {
   const links = [
     { href: "/", color: "red", label: "Ana Sayfa" },
     { href: "/about", color: "yellow", label: "Hakkımda" },
-    { href: "/contact", color: "green", label: "İletişim" },
+    { href: "/shift-planner", color: "purple", label: "ShiftPlanner" },
+    { href: "/travels", color: "green", label: "Gezdiğim Ülkeler" },
+    { href: "/contact", color: "blue", label: "İletişim" },
   ];
 
   const displayLabel =
@@ -47,6 +49,7 @@ export default function MiniTrafficNav() {
           background-color: #e0e0e0;
           display: flex;
           align-items: center;
+          gap: 8px;
           z-index: 1000;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         }
@@ -71,6 +74,12 @@ export default function MiniTrafficNav() {
         .dot.green {
           background-color: #00ca4e;
         }
+        .dot.purple {
+          background-color: #7c4dff;
+        }
+        .dot.blue {
+          background-color: #0d6efd;
+        }
 
         .dot:hover {
           transform: translateY(-2px);
@@ -90,6 +99,22 @@ export default function MiniTrafficNav() {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
+        }
+
+        @media (max-width: 576px) {
+          .traffic-nav {
+            padding: 6px 10px;
+          }
+
+          .dot {
+            width: 12px;
+            height: 12px;
+            margin-right: 6px;
+          }
+
+          .active-label {
+            font-size: 14px;
+          }
         }
       `}</style>
     </div>

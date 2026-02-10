@@ -10,7 +10,7 @@ const Aboutpage = () => {
     >
       <Row className="align-items-center g-5">
         {/* Profil Fotoğrafı */}
-        <Col md={4} className="text-center">
+        <Col md={4} className="text-center order-0 order-md-0">
           <Image
             src="https://media.licdn.com/dms/image/v2/D4E03AQGL3XMMBbv9Zw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1718235040526?e=2147483647&v=beta&t=dJGdqXs9n40cOSutATGmsMWt7Zzlgeq2Pt9jgNJsEu0" //
             roundedCircle
@@ -20,7 +20,7 @@ const Aboutpage = () => {
         </Col>
 
         {/* Yazılar */}
-        <Col md={8}>
+        <Col md={8} className="text-center text-md-start">
           <h1 className="mb-3 fw-bold">👋 Merhaba, Ben Can!</h1>
           <p className="lead text-muted">
             2001 doğumluyum ve modern web teknolojileriyle{" "}
@@ -42,7 +42,7 @@ const Aboutpage = () => {
             parçası.
           </p>
 
-          <Row className="g-2 mt-4">
+          <Row className="g-2 mt-4 justify-content-center justify-content-md-start">
             <Col xs="auto">
               <Link href="/" passHref legacyBehavior>
                 <Button variant="primary" size="lg">
